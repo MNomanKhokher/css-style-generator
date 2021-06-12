@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Generator</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-center"><h1>Css Style Generator</h1></div>
+    </header>
+    <div class="tab-container">
+      <button class="active btn" data-id="boxShadow">box shadow</button>
+      <button class="btn" data-id="textShadow">text shadow</button>
+      <button class="btn" data-id="gredient">Gredient</button>
+    </div>
+
+    <!-- tool box -->
+    <div class="main-container">
+      <div class="tool-box">
+        <div class="input-container">
+          <label for="x-diraction">X-Axis</label>
+          <div class="input">
+            <span class="left">-</span>
+            <span class="right">+</span>
+            <input
+              type="range"
+              min="-100"
+              max="100"
+              name=""
+              value="5"
+              id="x-diraction"
+            />
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="y-diraction">Y-Axis</label>
+          <div class="input">
+            <span class="left">-</span>
+            <span class="right">+</span>
+            <input
+              type="range"
+              min="-100"
+              max="100"
+              name=""
+              value="5"
+              id="y-diraction"
+            />
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="opacity">Blur</label>
+          <div class="input">
+            <span class="right">+</span>
+            <input type="range" name="" min="1" max="200" id="blur" value="0" />
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="color-picker">Pick Color</label>
+          <div class="input">
+            <input type="color" name="" id="color-picker" />
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="opacity">Opacity</label>
+          <div class="input">
+            <span class="right">+</span>
+            <input
+              type="range"
+              name=""
+              min="0"
+              max="1"
+              step="0.01"
+              id="opacity"
+              value="0.50"
+            />
+          </div>
+        </div>
+        <div class="input-container inset-container">
+          <div class="input">
+            <label for="inset">Inset</label>
+            <button class="inset">
+              <span class="inset-btn" data-id="0"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-container">
+        <div class="result-box"></div>
+        <div class="result-text hide"><h1>Text Shadow</h1></div>
+        <div class="code-container">
+          <textarea
+            spellcheck="false"
+            name=""
+            id="code-container"
+            cols="40"
+            rows=""
+          >
+          </textarea
+          ><span
+            class="copy-code"
+            style="
+              padding: 4px 4px;
+              color: white;
+              cursor: pointer;
+              border-radius: 5px;
+            "
+            >Copy code</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- script file link -->
+    <script src="./app.js"></script>
+  </body>
+</html>
